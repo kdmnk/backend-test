@@ -1,0 +1,12 @@
+<?php
+
+return [
+    'ExchangeRatesAPI' => [
+        'api_key' => 'example_api_key',
+        'url' => 'https://api.apilayer.com/exchangerates_data'
+    ],
+    'api_name_2' => [
+        'api_key' => 'example_api_key',
+        'url' => 'https://example.com/api'
+    ]
+];

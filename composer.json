@@ -3,7 +3,9 @@
     "description": "PHP Test for candidates",
     "type": "project",
     "require": {
-        "php": ">=7.3.0"
+        "php": ">=7.4",
+      "ext-curl": "*",
+      "ext-json": "*"
     },
     "autoload": {
         "psr-4": {

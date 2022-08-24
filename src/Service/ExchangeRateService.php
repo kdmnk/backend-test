@@ -6,12 +6,20 @@ namespace Opeepl\BackendTest\Service;
  */
 class ExchangeRateService {
 
+    public ServiceAPI $exchangesRatesAPI;
+
+    public function __construct()
+    {
+        $this->exchangesRatesAPI = new ExchangesRatesAPI();
+    }
+
     /**
      * Return all supported currencies
      *
      * @return array<string>
      */
     public function getSupportedCurrencies(): array {
+        return $this->exchangesRatesAPI->getSupportedCurrencies();
     }
 
     /**
@@ -23,5 +31,7 @@ class ExchangeRateService {
      * @return int
      */
     public function getExchangeAmount(int $amount, string $fromCurrency, string $toCurrency): int {
+
+        return $this->exchangesRatesAPI->getExchangeAmount($amount, $fromCurrency, $toCurrency);
     }
 }
